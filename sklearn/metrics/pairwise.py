@@ -209,7 +209,7 @@ def euclidean_distances(X, Y=None, *, Y_norm_squared=None, squared=False,
     For efficiency reasons, the euclidean distance between a pair of row
     vector x and y is computed as::
 
-        dist(x, y) = sqrt(dot(x, x) - 2 * dot(x, y) + dot(y, y))
+        dist(x, y) = scipy.spatial.distance.cdist(X, Y, metric=‘cosine’ )
 
     This formulation has two advantages over other ways of computing distances.
     First, it is computationally efficient when dealing with sparse data.
